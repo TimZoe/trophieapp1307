@@ -1,0 +1,15 @@
+.button {
+
+    background-color:cadetblue;
+    width:10vw;
+    height:5vh;
+    color:black;
+    text-decoration: none;
+    margin-left: 5vw;
+}
+
+.menuewrap {
+
+    display: flex;
+    flex-direction: row;
+}
