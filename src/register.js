@@ -1,12 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './register.css';
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
-import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
-
-
-Amplify.configure(awsconfig)
 
 function register (){
 
@@ -24,12 +18,11 @@ function register (){
         
         <div class="registerScreen">
 
-        <AmplifySignOut />
-
+       
         </div>
           
     </div>
    
     )
 }
-export default withAuthenticator(register);
+export default register;

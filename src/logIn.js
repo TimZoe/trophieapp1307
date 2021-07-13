@@ -1,12 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './logIn.css';
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
-import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 
-
-Amplify.configure(awsconfig)
 
 function logIn (){
 
@@ -22,7 +17,7 @@ function logIn (){
         </Link>
     
     <div class="LogInScreen">
-    <AmplifySignOut />
+
     </div>
    
    
@@ -33,4 +28,4 @@ function logIn (){
    
     )
 }
-export default withAuthenticator(logIn);
+export default logIn;
