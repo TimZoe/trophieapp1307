@@ -5,24 +5,22 @@ import Home from './Home';
 import About from './About';
 import logIn from './logIn';
 import register from './register';
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
-import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
+import dashboard from './dashboard';
 
-
-Amplify.configure(awsconfig)
 
 function App() {
   return (
  
     <div className="App"> 
-      <AmplifySignOut />
+     
+     
       <header className="App-header">
        
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/logIn" component={logIn} />
       <Route exact path="/register" component={register} />
+      <Route exact path="/dashboard" component={dashboard} />
 
        
       </header>
@@ -30,4 +28,4 @@ function App() {
   );
 }
 
-export default withAuthenticator(App);
+export default App;

@@ -1,6 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './register.css';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
+
+
+Amplify.configure(awsconfig)
 
 function register (){
 
@@ -8,18 +14,22 @@ function register (){
 
     <div>    
 
-    <h1 class="h1">Bitte Registieren</h1>   
-    
-    <div class="registerScreen">
+        <h1 class="h1">Bitte Registieren</h1>   
+        <Link to="./dashboard">
+            <div class="buttonReg">
+                Weiter zu meinem Dashboard
+            </div>
+        </Link>
         
-    </div>
-   
-   
-    
+        
+        <div class="registerScreen">
 
-                  
- </div>
+        <AmplifySignOut />
+
+        </div>
+          
+    </div>
    
     )
 }
-export default register;
+export default withAuthenticator(register);

@@ -1,4 +1,9 @@
-.LogInScreen {
+.buttonReg {
 
-
+    background-color:cadetblue;
+    width:30vw;
+    height:5vh;
+    color:black;
+    text-decoration: none;
+    margin-left: 5vw;
 }
