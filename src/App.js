@@ -6,6 +6,12 @@ import About from './About';
 import logIn from './logIn';
 import register from './register';
 import dashboard from './dashboard';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
+
+
+Amplify.configure(awsconfig)
 
 
 
@@ -14,7 +20,7 @@ function App() {
  
     <div className="App"> 
      
-     
+     <AmplifySignOut />
      
       <header className="App-header">
        
@@ -30,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
